@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio OS
+
+An interactive, macOS Sonoma-inspired portfolio website built with Next.js 15, React 19, and TypeScript. Experience a full operating system interface with boot animation, login screen, draggable windows, dock, menu bar, and functional applications.
+
+![Portfolio OS](https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80)
+
+## Features
+
+- **Boot Experience** — Apple-style boot animation → loading screen → login → desktop
+- **Window System** — Draggable, resizable, minimizable windows with z-index management
+- **macOS Dock** — Magnification animation, bounce effects, running indicators
+- **Menu Bar** — Clock, battery, WiFi, Bluetooth, theme toggle, spotlight, notifications
+- **Applications** — Finder, Safari, VS Code, Terminal, Mail, Settings, and 15+ portfolio apps
+- **Working Terminal** — 20+ commands with typing animation
+- **VS Code Simulator** — Syntax-highlighted portfolio source files
+- **Widgets** — Clock, Weather, Calendar, Notes, Music
+- **Command Palette** — `⌘K` quick navigation
+- **Spotlight Search** — `⌘Space` global search
+- **Settings** — Wallpaper changer, accent colors, theme, animations, blur
+- **Fully Responsive** — Desktop, laptop, tablet, and mobile layouts
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js 15 | App Router, SSR, optimization |
+| React 19 | UI framework |
+| TypeScript | Type safety |
+| Tailwind CSS 4 | Styling |
+| Framer Motion | UI animations |
+| GSAP | Advanced animations |
+| Zustand | Global state management |
+| React RND | Draggable/resizable windows |
+| Radix UI | Accessible primitives |
+| React Hot Toast | Notifications |
+| Lucide + React Icons | Icon library |
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/nishantchauhan/portfolio.git
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Login
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Password: `portfolio` (or leave empty and click Log In)
 
-## Learn More
+## Keyboard Shortcuts
 
-To learn more about Next.js, take a look at the following resources:
+| Shortcut | Action |
+|---|---|
+| `⌘K` / `Ctrl+K` | Command Palette |
+| `⌘Space` / `Ctrl+Space` | Spotlight Search |
+| `⌘W` / `Ctrl+W` | Close Window |
+| `⌘M` / `Ctrl+M` | Minimize Window |
+| `⌘D` / `Ctrl+D` | Show Desktop |
+| `⌘⇧T` / `Ctrl+Shift+T` | Toggle Theme |
+| `⌘N` / `Ctrl+N` | Notifications |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Terminal Commands
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+help, about, skills, projects, resume, experience, contact
+github, linkedin, clear, whoami, date, pwd, ls, cat
+theme, neofetch, history, sudo, joke, music, banner
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/                  # Next.js App Router
+├── components/
+│   ├── apps/             # Application windows (Finder, Safari, etc.)
+│   ├── os/               # OS shell (Dock, MenuBar, Windows)
+│   ├── shared/           # Reusable components
+│   ├── ui/               # Shadcn-style UI primitives
+│   └── widgets/          # Desktop widgets
+├── data/                 # Portfolio content & configuration
+├── hooks/                # Custom React hooks
+├── lib/                  # Utilities & app registry
+├── store/                # Zustand global state
+└── types/                # TypeScript interfaces
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+### Vercel (Recommended)
+
+```bash
+npm run build
+```
+
+Deploy to [Vercel](https://vercel.com) — zero configuration required.
+
+```bash
+npx vercel
+```
+
+### Manual Build
+
+```bash
+npm run build
+npm start
+```
+
+## Customization
+
+- **Content**: Edit files in `src/data/` (about, projects, skills, experience)
+- **Wallpapers**: Add URLs in `src/data/wallpapers.ts`
+- **Apps**: Configure in `src/data/apps.ts`
+- **Accent Color**: Change in Settings app or `src/store/useOSStore.ts`
+- **Contact Info**: Update `src/data/about.ts`
+
+## Performance
+
+- Lazy-loaded application components via `next/dynamic`
+- Optimized images with `next/image`
+- Persistent settings with Zustand middleware
+- Reduced motion support for accessibility
+
+## License
+
+MIT © Nishant Chauhan

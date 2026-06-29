@@ -1,0 +1,103 @@
+import type { FinderItem } from "@/types";
+
+export const finderRoot: FinderItem[] = [
+  {
+    id: "projects-folder",
+    name: "Projects",
+    type: "folder",
+    icon: "folder-blue",
+    appId: "projects",
+  },
+  {
+    id: "certificates-folder",
+    name: "Certificates",
+    type: "folder",
+    icon: "folder-yellow",
+    appId: "certificates",
+  },
+  {
+    id: "resume-file",
+    name: "Resume",
+    type: "file",
+    icon: "pdf",
+    appId: "resume",
+  },
+  {
+    id: "gallery-folder",
+    name: "Gallery",
+    type: "folder",
+    icon: "folder-purple",
+    appId: "projects",
+  },
+  {
+    id: "downloads-folder",
+    name: "Downloads",
+    type: "folder",
+    icon: "folder-green",
+    appId: "downloads",
+  },
+  {
+    id: "documents-folder",
+    name: "Documents",
+    type: "folder",
+    icon: "folder-blue",
+    children: [
+      {
+        id: "about-doc",
+        name: "About Me",
+        type: "file",
+        icon: "doc",
+        appId: "about",
+      },
+      {
+        id: "skills-doc",
+        name: "Skills",
+        type: "file",
+        icon: "doc",
+        appId: "skills",
+      },
+      {
+        id: "experience-doc",
+        name: "Experience",
+        type: "file",
+        icon: "doc",
+        appId: "experience",
+      },
+      {
+        id: "contact-doc",
+        name: "Contact",
+        type: "file",
+        icon: "doc",
+        appId: "contact",
+      },
+    ],
+  },
+  {
+    id: "ai-folder",
+    name: "AI",
+    type: "folder",
+    icon: "folder-red",
+    appId: "ai-projects",
+  },
+  {
+    id: "python-folder",
+    name: "Python",
+    type: "folder",
+    icon: "folder-yellow",
+    appId: "python-projects",
+  },
+  {
+    id: "broadcast-folder",
+    name: "Broadcast Engineering",
+    type: "folder",
+    icon: "folder-orange",
+    appId: "projects",
+  },
+  {
+    id: "it-asset-folder",
+    name: "IT Asset Management",
+    type: "folder",
+    icon: "folder-blue",
+    appId: "it-asset",
+  },
+];
