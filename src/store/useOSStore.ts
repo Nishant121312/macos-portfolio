@@ -519,8 +519,8 @@ export const useOSStore = create<OSStore>()(
         }
       },
 
-      runningApps: [],
-      dockBounce: null,
+      //runningApps: [],
+      //dockBounce: null,
     }),
     {
       name: "portfolio-os-settings",
